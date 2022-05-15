@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #FB6B6B;
+}
+.BackgroungWhite{
+    background-color: #fff;
+}
+h1{
+    color: #fff;
+    font-family: 'Righteous', cursive;
+
+}
+.red{
+    background-color: #FF3030;
+}
+.green{
+    background-color: #2FBE34;
+}
+.orange{
+    background-color: #FF922E;
+}
+.StartButton{
+   width: 40%;
+   height: 54px;
+   color: #D70900;
+   border: 1px solid #D70900;
+    text-align: center;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+    font-family: 'Recursive';
+    font-weight: 400;
+
+}
+.AlingCenter{
+    margin: 30% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.StartButton:active{
+    transition: transform .3s;
+    transform: scale(0.95);
+}
+.DisplayFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DisplayFlex img{
+    height: 60px;
+    width: 52px;
+}
+.Footer{
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    color: #333333;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 400;
+}
+
+.REcursiveFont{
+    font-family: 'Recursive', sans-serif;
+}
+.Card{
+    height: 65px;
+    width: 300px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 8px;
+}
+.Card2{
+    height: 131px;
+    width: 300px;
+    background-color: #FFFFD4;
+    margin-top: 10%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 10px;
+}
+.setinha{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.grande{
+    position: relative;
+    font-size: 50px;
+    top: 10px;
+}
+.RememberButton{
+    height:37.17px;
+    width:30%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+}
+.RememberButtonContainer{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+}
+.DontRememberText{
+    color: #FF3030;
+    text-decoration: line-through;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+   
+}
+.AlmostForgetText{
+    color: #FF922E;
+    text-decoration: line-through;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+.YepText{
+    color: #2FBE34;
+    text-decoration: line-through;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+.wrongImage{
+    height: 1px;
+}
+.marginBottom{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.Recursive{
+    font-family: 'Recursive';
+    font-weight: 400;
+    color: #333333;
+    font-size: 18px
+}
+.DisplayFlex3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.PlayIcone{
+    height: 23px;
+    width: 20px;
+    margin-right: 5px;
+}
+.TextAlignCenter{
+    text-align: center;
+}
+
+

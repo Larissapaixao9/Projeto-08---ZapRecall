@@ -1,0 +1,16 @@
+#wrongImg{
+    height: 23px;
+    width: 23px;
+    margin-left: 170px;
+}
+.DisplayFlex2{
+    display: flex;
+    align-items: center;
+}
+.Side{
+    display: flex;
+}
+.PlayIcone{
+    height: 23px;
+    width: 20px;
+}
