@@ -8,6 +8,10 @@ export default function Flashcards(){
 
     const[flashcards,setFlashcards]=React.useState(0)
     const[question,setQuestion]=React.useState('')
+    const[icones,setIcones]=React.useState([])
+    const[response,setResponse]=React.useState([])
+    const[answeredFlashcards,setAnsweredFlashcards]=React.useState(0);
+
     if(flashcards===0){
         console.log(Cards)
         return(
@@ -15,26 +19,34 @@ export default function Flashcards(){
             <HeadPage />
             {Cards.map((item,index)=><div className='AlingCenter' onClick={()=> setFlashcards(1)} >{item}</div>)}
             
-            <Footer>
-                <div className='Footer'>
-                   <h3>{flashcards}/4 CONCLUÍDOS</h3>
-                   
-                </div>
-            </Footer>
+            <Footer
+                    answeredFlashcards={answeredFlashcards}
+                    response={response}
+                    icones={icones}>
+                    <div className='Footer'>
+                        <h3>{flashcards}/4 CONCLUÍDOS</h3>
+                    </div>
+                </Footer>
             </div>
             )
-    
     }
     if(flashcards===1 ){
         console.log(Myquestion)
         return(
         <div >
             <HeadPage />
-            {Myquestion.map((item,index)=>(<FlashCardsList index={index} R={Myquestion[index].R} Q={Myquestion[index].Q} id={Myquestion[index].id} /> ))}         
+            {Myquestion.map((item,index)=>(<FlashCardsList index={index} R={Myquestion[index].R} Q={Myquestion[index].Q} id={Myquestion[index].id} response={response} setResponse={setResponse} icones={icones} setIcones={setIcones} answeredFlashcards={answeredFlashcards} setAnsweredFlashcards={setAnsweredFlashcards}/> ))}
+
+            <Footer
+                    answeredFlashcards={answeredFlashcards}
+                    response={response}
+                    icones={icones}>
+                    <div className='Footer'>
+                        <h3>{flashcards}/4 CONCLUÍDOS</h3>
+                    </div>
+                </Footer>
         </div>)
-
         }
-
 }
 let Myquestion=[
     {Q:"Quem é a esposa do Shrek?",R:"Fiona",id:1, Icone:<ion-icon className='PlayIcone' name="play-outline"></ion-icon>},

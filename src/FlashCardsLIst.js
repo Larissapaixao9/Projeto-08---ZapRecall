@@ -6,19 +6,28 @@ import wrong from './img/wrong.png'
 import almost from './img/almost.png'
 import yep from "./img/yep.png"
 import "./nweStyle.css"
-export default function FlashCardsList({Q,R,index,id}){
+export default function FlashCardsList({Q,R,index,id, response, setResponse, icones, setIcones, answeredFlashcards, setAnsweredFlashcards}){
     let qnt=[0];
     const Clicks=[{click:"dontRemember"},{click:"Almost"}]
     const[show,setShow]=React.useState(0)
-    const[response,setResponse]=React.useState([])
-    let[icone,setIcone]=React.useState(0)
     
-    function contar(){
-        setResponse([...qnt,{qnt}])
-        setShow(4);
-       console.log(response)
-
+    function AnsweringFlashcard(status){
+        setResponse([...response,status])
+        if(status=='wrong'){
+            setShow(4);
+            setIcones([...icones,wrong])
+        }
+        if(status=='almost'){
+            setShow(5);
+            setIcones([...icones,almost])
+        }
+        if(status=='yep'){
+            setShow(6);
+            setIcones([...icones,yep])
+        }
+        setAnsweredFlashcards(answeredFlashcards+1)
     }
+
     if(show===0){
     return(
         <>
@@ -31,15 +40,14 @@ export default function FlashCardsList({Q,R,index,id}){
        </>
     )}
     if(show===1){
-        console.log(response)
         
         return(
             <div className='Card2'>
         <p className='Recursive'>{R}</p>
         <div className='RememberButtonContainer'>
-            <div className='RememberButton red TextAlignCenter' onClick={contar} >Não lembrei</div>
-            <div className='RememberButton orange TextAlignCenter' onClick={()=>setShow(5) }>Quase não lembrei</div>
-            <div className='RememberButton green TextAlignCenter' onClick={()=>setShow(6)}>Zap!</div>
+            <div className='RememberButton red TextAlignCenter' onClick={()=>AnsweringFlashcard('wrong')} >Não lembrei</div>
+            <div className='RememberButton orange TextAlignCenter' onClick={()=>AnsweringFlashcard('almost')}>Quase não lembrei</div>
+            <div className='RememberButton green TextAlignCenter' onClick={()=>AnsweringFlashcard('yep')}>Zap!</div>
         </div>
         </div>)
     }
@@ -53,12 +61,11 @@ export default function FlashCardsList({Q,R,index,id}){
                 <p className='DontRememberText'>Pergunta {index+1}</p>
                 <img id='wrongImg' src={wrong} />
             </div>
-            <Footer>
-                <div  className='Footer'>
-                <h3>{index+1}/4 CONCLUÍDOS</h3>
-                <img id='wrongImg' src={wrong} />
-                </div>
-            </Footer>
+            <Footer
+                    answeredFlashcards={answeredFlashcards}
+                    response={response}
+                    icones={icones}
+                />
             </>
         )
     }
@@ -71,12 +78,11 @@ export default function FlashCardsList({Q,R,index,id}){
                     <p className='AlmostForgetText'>Pergunta {index+1}</p>
                     <img id='wrongImg' src={almost} />
                 </div>
-                <Footer>
-                <div  className='Footer'>
-                <h3>{index+1}/4 CONCLUÍDOS</h3>
-                <img id='wrongImg' src={almost} />
-                </div>
-            </Footer>
+                <Footer
+                    answeredFlashcards={answeredFlashcards}
+                    response={response}
+                    icones={icones}
+                />
             </>
 
         )
@@ -90,15 +96,14 @@ export default function FlashCardsList({Q,R,index,id}){
                 <img id='wrongImg' src={yep} />
             </div>
 
-            <Footer>
-            <div  className='Footer'>
-            <h3>{index+1}/4 CONCLUÍDOS</h3>
-         
-            </div>
-            </Footer>
+            <Footer
+                    answeredFlashcards={answeredFlashcards}
+                    response={response}
+                    icones={icones}
+                />
             </>
         )
     }
-    console.log(qnt)
+    console.log(response)
   
 }

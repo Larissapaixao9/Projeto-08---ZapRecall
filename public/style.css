@@ -10,7 +10,6 @@ body{
 h1{
     color: #fff;
     font-family: 'Righteous', cursive;
-
 }
 .red{
     background-color: #FF3030;
@@ -35,7 +34,7 @@ h1{
 
 }
 .AlingCenter{
-    margin: 30% auto;
+    margin: 10% auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,18 +56,19 @@ h1{
 }
 .Footer{
     background-color: #fff;
-    height: 70px;
+
     width: 100%;
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     bottom: 0;
     left: 0;
     color: #333333;
     text-align: center;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 30%;
     font-family: 'Recursive', sans-serif;
     font-weight: 400;
+
 }
 
 .REcursiveFont{
@@ -87,7 +87,7 @@ h1{
     padding: 8px;
 }
 .Card2{
-    height: 131px;
+  
     width: 300px;
     background-color: #FFFFD4;
     margin-top: 10%;
@@ -101,8 +101,8 @@ h1{
 }
 .setinha{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 10px;
+    right: 10px;
 }
 .grande{
     position: relative;
@@ -169,5 +169,29 @@ h1{
 .TextAlignCenter{
     text-align: center;
 }
-
-
+.padding{
+    padding: 5px;
+}
+.SizeAdjust{
+    height: 2px;
+    width: 2px;
+    margin-right: 20px;
+}
+.DisplayFlex4{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+.FontAdjust{
+    color: #333333;
+    font-family: 'Recursive', sans-serif;
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 18px;
+}
+.Recursive400{
+    font-family: 'Recursive', sans-serif;
+    color: #333333;
+    font-weight: 400;
+    font-size: 18px;
+}
