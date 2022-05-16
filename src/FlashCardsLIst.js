@@ -13,11 +13,11 @@ export default function FlashCardsList({Q,R,index,id}){
     const[response,setResponse]=React.useState([])
     let[icone,setIcone]=React.useState(0)
     
-
     function contar(){
         setResponse([...qnt,{qnt}])
         setShow(4);
        console.log(response)
+
     }
     if(show===0){
     return(
@@ -56,7 +56,7 @@ export default function FlashCardsList({Q,R,index,id}){
             <Footer>
                 <div  className='Footer'>
                 <h3>{index+1}/4 CONCLUÍDOS</h3>
-               
+                <img id='wrongImg' src={wrong} />
                 </div>
             </Footer>
             </>
@@ -74,7 +74,7 @@ export default function FlashCardsList({Q,R,index,id}){
                 <Footer>
                 <div  className='Footer'>
                 <h3>{index+1}/4 CONCLUÍDOS</h3>
-              
+                <img id='wrongImg' src={almost} />
                 </div>
             </Footer>
             </>
