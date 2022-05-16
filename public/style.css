@@ -31,7 +31,7 @@ h1{
     cursor: pointer;
     font-family: 'Recursive';
     font-weight: 400;
-
+    
 }
 .AlingCenter{
     margin: 10% auto;
@@ -40,6 +40,13 @@ h1{
     justify-content: center;
     flex-direction: column;
     
+}
+.AlingCenter1{
+    margin: 40% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .StartButton:active{
     transition: transform .3s;
@@ -65,7 +72,7 @@ h1{
     color: #333333;
     text-align: center;
     font-size: 18px;
-    margin-top: 30%;
+   
     font-family: 'Recursive', sans-serif;
     font-weight: 400;
 
@@ -194,4 +201,7 @@ h1{
     color: #333333;
     font-weight: 400;
     font-size: 18px;
+}
+.margin{
+    margin-top: 20%;
 }
